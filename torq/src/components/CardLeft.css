@@ -1,0 +1,116 @@
+.CardLeft {
+    display: flex;
+    flex-direction: row;
+    height : 93vh;
+    width: 100vw;
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+.right{
+    background-color: black;
+    min-height: 100% !important;
+    min-width: 75% !important;
+    
+}
+.left{
+    background-color: white;
+    min-height: 100% !important;
+    min-width: 25% !important;
+}
+
+.right-div{
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.right-bottom-div{
+    background-color: black;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    width: 75% !important;
+    height: 10% !important;
+    
+}
+
+.div-block{
+    padding: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    
+}
+.div-block > h3 {
+    font-size: 30px;
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+}
+.div-block > text {
+    color: #b8b8b8;
+}
+
+.countup{
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.line-right{
+    border-right: 0.25px #ffffff solid;
+
+}
+
+.left > div {
+    margin-top: 10%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.left > div > h6 {
+    
+    letter-spacing: 0.05px;
+}
+.left > div > h2 {
+    
+    font-weight: 700;
+}
+
+.left > div > p {
+    line-height: 1.4rem;
+}
+
+.left > hr {
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 80%;
+}
+.ORD_BUTTON {
+    position: absolute;
+    bottom: 20px;
+    margin-right: 30px;
+    right: 0;
+    
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 15px;
+    padding: 5px;
+    width: 200px;
+    font-size: 1.2rem;
+    margin: 15px;
+    font-weight: 700;
+    border:none;
+    border:solid 2px #000000;    
+    background: rgba(255, 255, 255,0);
+
+}
+.ORD_BUTTON:hover  {
+    background-color : #000000;
+    color: #ffffff;
+
+}
