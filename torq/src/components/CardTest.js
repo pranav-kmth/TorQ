@@ -1,14 +1,21 @@
 import React , {useState} from 'react';
 import './CardTest.css';
+import rwb2 from '../assets/roadster/roadster1.jpeg';
 import {Fade} from 'react-reveal';
 import {Link} from 'react-router-dom';
 import CountUp from 'react-countup';
+import rwb1 from '../assets/rwb/rwb1.jpeg';
+import roadster1 from '../assets/roadster/roadster3.jpeg';
+import skyline1 from '../assets/skyline/skyline3.jpeg';
+import m1 from '../assets/model3/model3.jpeg';
 
 
-
-function CardLeft(props) {
-    console.log(props.items.full_name);  
-    return (      
+function CardTest(props) {
+  
+  console.log(props.items.full_name);
+  
+    return (
+      
     <section id="about" className="about">
       <div className="container col-xl-12" >
 
@@ -18,10 +25,14 @@ function CardLeft(props) {
               <div className="col-12"> 
             <img src={props.items.bg_img} className="cardImg img-fluid col-xl-12 " alt=""/>
             </div>
-            </Fade>            
-                       
+            </Fade>
+            
+            <h6 >Everything you're tryna find in your girlfriend. And more</h6>
+                        <h3 className="font-weight-bold">Autonomous. Smart. Fast</h3>
+                        
           </div>
-          <div className="col-xl-3 pt-4 pt-xl-0 order-2 order-xl-1 content" >                
+          <div className="col-xl-3 pt-4 pt-xl-0 order-2 order-xl-1 content" >
+                
                   <div>
                     <Fade top >
                     <h6 className="mt-2">{props.items.sub_text}</h6>
@@ -29,23 +40,32 @@ function CardLeft(props) {
                     </Fade>
                     <Fade right>
                     <p className = "">{props.items.para}</p>
-                    </Fade>                         
-                  </div> 
+                    </Fade> 
+                        
+                  </div>
+                
+                    
+                    
                 <Fade bottom >
                     <div>
+                        
                       <div className="container" >
+
                       <div className="row justify-content-center" >
                       <div className="row mt-5 justify-content-center" >
                         <div className="col-xl-6 col-md-4 col-6">
                           <div className="icon-box">
                             <h6>From 0-60 mph</h6>
                             <h3 className = "countup">
+                    
                             <CountUp 
                               end= {props.items.acc_60}
                               decimals = {2}
+                              
                               start = {0}
                               duration = {2.6}
                               redraw ="true"
+                            
                             /><text >s</text>
                             </h3>
                           </div>
@@ -149,4 +169,4 @@ function CardLeft(props) {
     )
 }
 
-export default CardLeft;
+export default CardTest

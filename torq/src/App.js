@@ -5,61 +5,117 @@ import Slide from './Slide';
 import {BrowserRouter as Router , Switch , Route } from "react-router-dom";
 import Catalog from './components/Catalog';
 import Customise from './components/Customise';
+import Signup from './components/Signup';
+import React, { Component } from 'react';
+import Login from './components/Login';
+import { Items } from './components/Items';
+import Loading from './components/Loading';
 
-import React, { Component } from 'react'
 
 export default class App extends Component {
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      userName : "",
+      userMail : "" ,
+      isLoggedIn  : false , 
+      isLoading : true , 
+    }
+  }
 
+  componentDidMount = () => {
+    this.setState ( {
+      isLoading : false ,
+    })
+  }
 
-
+  
   render() {
     return (
       <Router>
-        
-        
         <div className="App">
-          
+          <Navbar 
+            isLoggedIn = {this.state.isLoggedIn}
+            userName = {this.state.userName}
+            userMail  = {this.state.userMail}          
+          />
           <Switch >
             <Route path="/Roadster/design">
-              <Navbar />
+              
               <Customise />    
             </Route>
-            <Route path="/Roadster">
-              <Navbar />
-              <Catalog />    
+
+            <Route path="/Roadster" >
+              
+            {this.state.isLoading ? <Loading /> : <Catalog 
+                items = {Items[2]}
+                img = {Items[2].bg_img}
+              /> }   
             </Route>
+
             <Route path="/RWB-911/design">
-              <Navbar />
+              
               <Customise />    
             </Route>
+
             <Route path="/RWB-911">
-              <Navbar />
-              <Catalog />    
+              
+            {this.state.isLoading ? <Loading /> : <Catalog 
+                items = {Items[0]}
+                img = {Items[0].bg_img}
+              /> }    
             </Route>
+
             <Route path="/Skyline/design">
-              <Navbar />
+              
               <Customise />  
             </Route>
+
             <Route path="/Skyline">
-              <Navbar />
-              <Catalog />    
+              
+            {this.state.isLoading ? <Loading /> : <Catalog 
+                items = {Items[3]}
+                img = {Items[3].bg_img}
+              /> }    
             </Route>
+
             <Route path="/Model-3/design">
-              <Navbar />
+              
               <Customise />    
             </Route>
+
             <Route path="/Model-3">
-              <Navbar />
-              <Catalog />    
+              {this.state.isLoading ? <Loading /> : <Catalog 
+                items = {Items[1]}
+                img = {Items[1].bg_img}
+              /> }
+                 
             </Route>
+
+            <Route path="/Login">
+              
+              <Login 
+              isLoggedIn = {this.state.isLoggedIn}
+              userName = {this.state.userName}
+              
+              />
+            </Route>
+
+            <Route path="/Signup">
+              
+              <Signup 
+              isLoggedIn = {this.state.isLoggedIn}
+              userName = {this.state.userName}
+              
+              />
+            </Route>
+            
+
             <Route path="/">
-              <Navbar />
+              
               <Slide />
-    
             </Route>
-    
-    
-    
           </Switch>
         </div>
   

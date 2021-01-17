@@ -1,0 +1,39 @@
+* {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+}
+
+.cust_row{
+    background-color: rgb(228, 228, 228);
+}
+
+.cust_img {
+    width: 100% !important;
+    
+}
+
+.cust_button {
+    
+    border: none;
+    
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    opacity: 0.9;
+
+}
+
+.cust_button:hover {
+    opacity: 1;
+}
+
+.cust_tab {
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-top: 10%;
+}
+
+.cust_tab > h6 {
+    margin-top: 5%;
+}

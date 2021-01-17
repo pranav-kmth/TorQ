@@ -2,17 +2,45 @@ import React, { Component } from 'react';
 import './Navbar.css';
 import {Navbar as NavBar, Nav , NavDropdown} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-
+import Navbutton from './components/NavButton';
+import {auth} from './components/firebase';
 
 export default class Navbar extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            userName : props.userName , 
+            isLoggedIn : props.isLoggedIn , 
+            userMail : props.userMail ,
+        }
+    }
     
-    
+    componentDidMount =() =>{
+        auth.onAuthStateChanged(authUser => { 
+            if(authUser){
+              this.setState({
+                  isLoggedIn : true
+,              })
+              
+            }
+            this.setState({
+                isLoggedIn : false
+,              })
+            
+          })
+          console.log(this.state.isLoggedIn);
+    }
 
     render() {
+        const logout =() => {
+            auth.signOut().then ( function () {
+                alert('signed out');
+            })
+        }
         return (
-            <NavBar className="navb" collapseOnSelect expand="md" bg="dark" variant="dark" sticky="top">
+            <NavBar className="navb col-lg-12" collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
                 <Link to='/'>
-                    <NavBar.Brand href="#home" className="navbar-logo">TorQ</NavBar.Brand>
+                    <NavBar.Brand  className="navbar-logo">TorQ  </NavBar.Brand>
                 </Link>
                 <NavBar.Toggle aria-controls="responsive-navbar-nav" />
                 <NavBar.Collapse id="responsive-navbar-nav">
@@ -28,11 +56,12 @@ export default class Navbar extends Component {
                     </Nav>
                     
                     <Nav className="ml-auto">
+                    
                     <NavDropdown title="Settings"  className="dropdown-menu-left" id="nav-dropdown">
-                        <NavDropdown.Item eventKey="4.1"><i class="fas fa-sync-alt"></i> &nbsp;Trade in </NavDropdown.Item>
-                        <NavDropdown.Item eventKey="4.2"><i class="fas fa-puzzle-piece"></i> &nbsp;Accessories </NavDropdown.Item>
-                        <NavDropdown.Item eventKey="4.3"><i class="fas fa-tools"></i> &nbsp;Customize</NavDropdown.Item>
-                        <NavDropdown.Item eventKey="4.3"><i class="fas fa-clipboard-list"></i> &nbsp;Orders</NavDropdown.Item>
+                        <NavDropdown.Item eventKey="4.1"><i className="fas fa-sync-alt"></i> &nbsp;Trade in </NavDropdown.Item>
+                        <NavDropdown.Item eventKey="4.2"><i className="fas fa-puzzle-piece"></i> &nbsp;Accessories </NavDropdown.Item>
+                        <NavDropdown.Item eventKey="4.3"><i className="fas fa-tools"></i> &nbsp;Customize</NavDropdown.Item>
+                        <NavDropdown.Item eventKey="4.3"><i className="fas fa-clipboard-list"></i> &nbsp;Orders</NavDropdown.Item>
                                              
                         
                         <NavDropdown.Divider />
@@ -40,8 +69,11 @@ export default class Navbar extends Component {
                         <NavDropdown.Item eventKey="4.4">Contact Us</NavDropdown.Item>
                         <NavDropdown.Item eventKey="4.4">Test Drive</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="exit" className= "navbar-exit">Adios! &nbsp; <i class="fas fa-sign-out-alt"></i></Nav.Link>
-                    </Nav>
+                    <Navbutton />
+                    <Nav.Link onClick={logout} className= "navbar-exit"> 
+                    <i class="fas fa-power-off"></i>
+                    </Nav.Link>
+                     </Nav>
                 </NavBar.Collapse>
             </NavBar>
         )

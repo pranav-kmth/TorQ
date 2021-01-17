@@ -1,0 +1,65 @@
+
+
+.loginInput {
+    border: none;
+    outline: none
+}
+
+.loginContainer {
+    border-radius: 15px
+}
+
+@media(min-width:992px) {
+    .loginImg {
+        width: 500px;
+        height: 500px
+    }
+
+    
+    .loginContainer {
+        background-image: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(242, 242, 253), rgb(255, 255, 255))
+    }
+}
+
+@media(max-width:991px) {
+    .loginImg {
+        display: none
+    }
+
+    
+
+    .loginContainer {
+        background-image: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(242, 242, 253), rgb(164, 164, 235))
+    }
+}
+
+@media(max-width:768px) {
+    .loginImg {
+        display: none
+    }
+
+    
+}
+
+@media(max-width:567px) {
+    .loginImg {
+        display: none
+    }
+
+    .loginContainer {
+        margin-left: 0px;
+        margin-top: 30px
+    }
+
+   
+}
+.loginContainer{
+    top: 10%;
+    border: 2px rgba(0, 0, 0, 0.575) solid;
+    background-color: #ffffff;
+}
+.login {
+    background-color: aqua;
+    width: 100vw;
+    height: 100vh;  
+}

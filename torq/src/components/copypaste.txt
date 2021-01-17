@@ -1,0 +1,109 @@
+<Card
+                name = "RWB-911" 
+                title = "RWB Porsche 911"
+                subtext = "Starting at $219,999"
+                img = {rwb1}
+                re-url = "$"
+                />
+                <Card 
+                name = "Roadster"
+                title = "Roadster"
+                subtext = "Starting at $249,999"
+                img = {roadster1}
+                re-url = "$"
+                />
+                <Card 
+                name = "Skyline"
+                title = "Skyline"
+                subtext = "Starting at $149,999"
+                img = {skyline1}
+                re-url = "$"
+                />
+                <Card 
+                name = "Model-3"
+                title = "Tesla Model-3"
+                subtext = "Starting at $31,999"
+                img = {m1}
+                re-url = "$"
+                />
+
+
+
+                import rwb2 from '../assets/rwb/rwb2.jpeg';
+import rwb3 from '../assets/rwb/rwb3.jpeg';
+import rwb4 from '../assets/rwb/rwb4.jpeg';
+import rwb5 from '../assets/rwb/rwb5.jpeg';
+import rwb6 from '../assets/rwb/rwb6.jpeg';
+import rwb7 from '../assets/rwb/rwb7.jpeg';
+import rwb8 from '../assets/rwb/rwb8.jpeg';
+import rwb9 from '../assets/rwb/rwb9.jpeg';
+
+
+//img import
+<Container 
+                className = "card col-xl-12 " 
+                style = {{
+                    backgroundImage : `url(${rwb1})` ,
+                    backgroundPosition : 'center' ,
+                    backgroundRepeat : 'no-repeat',
+                    backgroundSize : 'cover' , 
+                    objectFit : 'fill'
+                    }}>
+
+
+
+//customise stuff
+
+<div class="cust_container">
+
+					<div class="row">
+
+					<div class="col-lg-3">
+						<h1 class="my-4">Shop Name</h1>
+						<div class="list-group">
+						<a href="#" class="list-group-item active">Category 1</a>
+						<a href="#" class="list-group-item">Category 2</a>
+						<a href="#" class="list-group-item">Category 3</a>
+						</div>
+					</div>
+					
+
+					<div class="col-lg-9">
+
+						<div class="card mt-4">
+						
+						<div class="card-body">
+							<h3 class="card-title">Product Name</h3>
+							<h4>$24.99</h4>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+							<span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+							4.0 stars
+						</div>
+						</div>
+						
+
+						<div class="card card-outline-secondary my-4">
+						<div class="card-header">
+							Product Reviews
+						</div>
+						<div class="card-body">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+							<small class="text-muted">Posted by Anonymous on 3/1/17</small>
+							<hr/>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+							<small class="text-muted">Posted by Anonymous on 3/1/17</small>
+							<hr/>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+							<small class="text-muted">Posted by Anonymous on 3/1/17</small>
+							<hr/>
+							<a href="#" class="btn btn-success">Leave a Review</a>
+						</div>
+						</div>
+						
+
+					</div>
+					
+
+					</div>
+
+				</div>
