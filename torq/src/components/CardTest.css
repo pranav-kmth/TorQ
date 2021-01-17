@@ -86,3 +86,12 @@
 .cardImg {
   background-size: cover;
 }
+
+.container {
+  height: 93vh;
+  background-color: black;
+}
+
+.row {
+  background-color: black;
+}

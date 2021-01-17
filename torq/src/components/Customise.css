@@ -4,7 +4,7 @@
 }
 
 .cust_row{
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(255, 255, 255);
 }
 
 .cust_img {
@@ -34,6 +34,46 @@
     margin-top: 10%;
 }
 
-.cust_tab > h6 {
+.cust_tab > h6  {
     margin-top: 5%;
 }
+
+.wheel1 {
+    width: 80px !important;
+    height: 80px !important;    
+    border-radius: 50% !important;
+    margin-right: 15px;
+    border: none;
+    
+}
+.wheelimg{
+    width: 78px !important;
+    height: 78px !important;
+    
+}
+.rangeButton { 
+    margin: 10px;
+
+}
+
+.perfButton {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border-width: 1px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.perfButtonSelected {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    border-width: 5px;
+    background-color: rgb(40, 116, 231);
+    font-size: 20px;
+}
+
